@@ -1,0 +1,21 @@
+{
+  "name": "exporter",
+  "version": "1.0.0",
+  "description": "exporter",
+  "repository": "https://gitlab.com/symphony.com/symphony-bizops/symphony-exporter.git",
+  "main": "exporter.js",
+  "scripts": {
+    "start": "node exporter.js",
+    "test": "node Tests/index.js",
+    "genrsa": "openssl genrsa -out private.pem 4096 && openssl rsa -in private.pem -pubout"
+  },
+  "author": "Miguel Clark - Symphony",
+  "license": "MIT",
+  "dependencies": {
+    "bot-commander": "^1.1.2",
+    "jszip": "^3.5.0",
+    "needle": "^2.5.2",
+    "njwt": "^1.0.0",
+    "symphony-api-client-node": "^1.1.2"
+  }
+}

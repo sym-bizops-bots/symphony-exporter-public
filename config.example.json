@@ -1,0 +1,38 @@
+{
+    "sessionAuthHost": "POD_NAME.symphony.com",
+    "sessionAuthPort": 443,
+    "keyAuthHost": "POD_NAME.symphony.com",
+    "keyAuthPort": 443,
+    "podHost": "POD_NAME.symphony.com",
+    "podPort": 443,
+    "agentHost": "POD_NAME.symphony.com",
+    "agentPort": 443,
+
+    "botUsername": "BOT_USERNAME",
+    "botEmailAddress": "NOT_EMAIL",
+    
+    "authType": "rsa",
+    "botPrivateKeyPath": "./secrets/",
+    "botPrivateKeyName": "BOT_RSA_KEY.pem",
+
+    "appId": "exporter",
+    "appRSAKey": "./secrets/OBO_APP_RSA_KEY.pem",
+
+    "ceEnabled": true,
+    "ceCert": "./secrets/ceservice-cert.p12",
+    "ceCertPassword": "CE_CERT_PASSWORD",
+    "ceSessionAuthHost": "POD_NAME.symphony.com",
+    "ceSessionAuthPort": "8444",
+    "ceKeyAuthHost": "POD_NAME.symphony.com",
+    "ceKeyAuthPort": "8444",
+    
+    "templates": {
+        "start": "<card>Thank you {0} for your message export request.<br/>Exporting messages {1}.<br/>Your request has been queued and export will be sent shortly.</card>",
+        "complete": "<card>Hi {0}, export is complete.</card>",
+        "help": "<card>Welcome to Symphony Message Exporter.<br/>Simple to use, just send /export. Send /help at any time to see these instructions.<table><tr><td>/export [since] [to]</td><td>export messages between the entered dates from all of your streams.</td></tr><tr><td>/export 2020</td><td>export messages since start of 2020</td></tr><tr><td>/export March2020</td><td>export messages since Mar 01 2020</td></tr><tr><td>/export 23Mar2020</td><td>export messages since Mar 23 2020</td></tr><tr><td>/export Jan2020 Mar2020</td><td>export messages since Jan 01 2020 to Mar 01 2020</td></tr></table>Only dates after 1970 are accepted.<br/>The [since] date must be less than or equal to the [to] date.<br/>Try entering dates like 2020, 2020/1, Jan2020 etc.</card>",
+        "error": "<card>Sorry {0}, there was a problem processing request. Please try again or contact your pod admin.<br/><pre>{1}</pre></card>",
+        "invalidDate": "<card>Invalid date entered.</card>"
+    },
+
+    "debugMode": false
+}

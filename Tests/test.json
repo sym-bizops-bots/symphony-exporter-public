@@ -1,0 +1,40 @@
+{
+    "sessionAuthHost": "POD.symphony.com",
+    "sessionAuthPort": 443,
+    "keyAuthHost": "POD.symphony.com",
+    "keyAuthPort": 443,
+    "podHost": "POD.symphony.com",
+    "podPort": 443,
+    "agentHost": "POD.symphony.com",
+    "agentPort": 443,
+
+    "botUsername": "BOT_USERNAME",
+    "botEmailAddress": "BOT_EMAIL",
+    
+    "authType": "rsa",
+    "botPrivateKeyPath": "./Tests/secrets/",
+    "botPrivateKeyName": "test-bot.pem",
+
+    "appId": "exporter",
+    "appRSAKey": "./Tests/secrets/test-app.pem",
+
+    "ceEnabled": true,
+    "ceCert": "./Tests/secrets/test-ceservice.p12",
+    "ceCertPassword": "changeit",
+    "ceSessionAuthHost": "POD-api.symphony.com",
+    "ceSessionAuthPort": "8444",
+    "ceKeyAuthHost": "POD-api.symphony.com",
+    "ceKeyAuthPort": "8444",
+
+    "responses": {
+        "initial": "Thankyou {0} for your request for messages since {1}. Your request has been queued and I will respond with details shortly.",
+        "reply": "Hi {0}, thankyou for waiting, please find your requested messages attached.",
+        "invalid": "Hi {0}, welcome to Symphony Message Exporter. To use, try sending me one of the following messages:<table><tr><td>/export or #export</td><td>export messages for the past day from all your streams</td></tr><tr><td>/export 2019</td><td>export messages since beginning of 2019</td></tr><tr><td>/export March2019</td><td>export messages since Mar 01 2019</td></tr><tr><td>/export 23Mar2018</td><td>export messages since Mar 23 2018</td></tr></table>",
+        "error": "Sorry {0}, there was a problem processing request. Please try again or contact your pod admin.<br/><pre>{1}</pre>"
+    },
+
+    "testStream": "STREAM_ID",
+    "testUserId": "USER_ID",
+
+    "debugMode": true
+}
